@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  button,
+  .button {
+    @apply cursor-pointer py-4 px-6 rounded-3xl border-none text-base mr-2 text-white;
+  }
+
+  .container {
+    @apply w-full py-10 px-7 max-w-4xl mx-auto md:pt-24;
+  }
+
+  label {
+    @apply mb-2 text-sm;
+  }
+
+  input,
+  select {
+    @apply w-full bg-slate-800 text-white rounded-md px-3 py-2 border-none focus:outline-none;
+  }
+}
+
+@layer utilities {
+  /* For Webkit-based browsers (Chrome, Safari and Opera) */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* For IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .status-button {
+    @apply mr-4 items-center py-2 px-8 rounded-xl before:content-[''] before:w-[10px] before:h-[10px] before:rounded-full before:mr-2;
+  }
+
+  .paid {
+    @apply before:bg-[#33d69f] text-[#33d69f] bg-[#330ea01a];
+  }
+
+  .pending {
+    @apply before:bg-[#ff8f00] text-[#ff8f00] bg-[#ff91001a];
+  }
+
+  .draft {
+    @apply before:bg-[#dfe3fa] text-[#dfe3fa] bg-[#dfe3fa1a];
+  }
+}
+
+.invoice-enter-active,
+.invoice-leave-active {
+  transition: 0.8s ease all;
+}
+
+.invoice-enter-from,
+.invoice-leave-to {
+  transform: translateX(-700px);
+}
