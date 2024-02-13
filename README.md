@@ -1,40 +1,53 @@
-# invoice-app
+# Vue 3 Invoice App
 
-This template should help get you started developing with Vue 3 in Vite.
+## Description
 
-## Recommended IDE Setup
+The Vue 3 Invoice App is a small web application designed to help users track invoices easily. It allows users to create, draft, and track invoices based on their statuses, such as pending, paid, or draft. The app leverages the power of Vue.js 3 and TypeScript for frontend development and integrates with Google Firebase for data storage.
+Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- Create and manage invoices
+- Track invoices based on statuses: pending, paid, or draft
+- Store invoice data securely using Google Firebase
+- Responsive design for seamless usage on desktop and mobile devices
 
-## Type Support for `.vue` Imports in TS
+## Configuration
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+Before using the app, you need to set up a Google Firebase project and configure Firebase credentials in the app. Follow these steps:
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+1. Create a new Firebase project at Firebase Console.
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+Obtain your Firebase configuration object, which includes the following variables:
 
-## Customize configuration
+- VUE_API_KEY
+- VUE_AUTH_DOMAIN
+- VUE_PROJECT_ID
+- VUE_STORAGE_BUCKET
+- VUE_MESSAGE_SENDER_ID
+- VUE_APP_ID
+- VUE_MEASUREMENT_ID
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+2. Create a .env file in the root directory of the project.
+
+3. Add the Firebase configuration variables to the .env file in the following format:
+
+```
+VUE_API_KEY=your-api-key
+VUE_AUTH_DOMAIN=your-auth-domain
+VUE_PROJECT_ID=your-project-id
+VUE_STORAGE_BUCKET=your-storage-bucket
+VUE_MESSAGE_SENDER_ID=your-message-sender-id
+VUE_APP_ID=your-app-id
+VUE_MEASUREMENT_ID=your-measurement-id
+```
+
+Save the .env file.
+
+With the .env file configured, the Vue 3 Invoice App will be able to connect to your Firebase project and use the provided credentials for authentication and data storage.
 
 ## Project Setup
 
+After cloning the repository, install the dependancies. You will need a google firebase acount to access data.
+
 ```sh
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
 ```
