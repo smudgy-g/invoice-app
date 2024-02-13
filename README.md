@@ -18,13 +18,13 @@ Before using the app, you need to set up a Google Firebase project and configure
 
 Obtain your Firebase configuration object, which includes the following variables:
 
-- VUE_API_KEY
-- VUE_AUTH_DOMAIN
-- VUE_PROJECT_ID
-- VUE_STORAGE_BUCKET
-- VUE_MESSAGE_SENDER_ID
-- VUE_APP_ID
-- VUE_MEASUREMENT_ID
+- VITE_API_KEY
+- VITE_AUTH_DOMAIN
+- VITE_PROJECT_ID
+- VITE_STORAGE_BUCKET
+- VITE_MESSAGE_SENDER_ID
+- VITE_APP_ID
+- VITE_MEASUREMENT_ID
 
 2. Create a .env file in the root directory of the project.
 
